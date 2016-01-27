@@ -25,3 +25,7 @@ h1 {
 	margin: 1em;
 	border: 2px solid black;
 }
+
+.story p {
+	margin: 1em 3em;
+}
