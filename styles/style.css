@@ -1,0 +1,17 @@
+.row {
+	border: 2px solid black;
+}
+
+/*#face {
+	padding: 0 3em;
+}*/
+
+#logo {
+	display: block;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 6em;
+}
