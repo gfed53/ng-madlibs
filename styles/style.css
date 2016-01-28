@@ -16,14 +16,19 @@ h1 {
 	font-size: 6em;
 }
 
-.words h2 {
-	margin-left: 1.5em;
+.words input {
+	display: block;
+	margin: 1em;
 }
 
 .words p {
 	text-align: center;
 	margin: 1em;
 	border: 2px solid black;
+}
+
+.story {
+	margin-top: 20em;
 }
 
 .story p {
