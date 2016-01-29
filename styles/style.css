@@ -31,10 +31,10 @@ h1 {
 	border: 2px solid black;
 }
 
-.story {
+.story-male, .story-female {
 	margin-top: 20em;
 }
 
-.story p {
+.story-male p, .story-female p {
 	margin: 1em 3em;
 }

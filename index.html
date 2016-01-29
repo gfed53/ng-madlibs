@@ -25,10 +25,9 @@
 				<input type="text" placeholder = "being" ng-model="being">
 				<input type="text" placeholder = "name" ng-model="name">
 				<form action="">
-					<input type="radio" name="gender" value="male"> Male 
-					<input type="radio" name="gender" value="female"> Female 
+					<input type="radio" ng-model="gender.name" value="male"> Male 
+					<input type="radio" ng-model="gender.name" value="female"> Female 
 				</form>
-				<input type="text" placeholder = "he or she" ng-model="heOrShe">
 				<input type="text" placeholder = "adjective" ng-model="adjective">
 				<input type="text" placeholder = "verb" ng-model="verb">
 			</div>
@@ -43,17 +42,24 @@
 			<div class="col-md-4">
 				<input type="text" placeholder = "celebrity" ng-model="celebrity">
 				<input type="text" placeholder = "number" ng-model="number">
-				<input type="text" placeholder = "him or her" ng-model="himOrHer">
-				<input type="text" placeholder = "past-tense verb" ng-model="pastTenseVerb">
+				<input type="text" placeholder = "another adjective" ng-model="adjective3">
 				<input type="text" placeholder = "mood" ng-model="mood">
 			</div>
 		</section>
-		<section class="row story">
+		<section class="row story-male" ng-if="heOrShe === 'he' || gender.name === 'male'">
 			<p>
-				There once was a {{ being }} named {{ name }}. {{ heOrShe }} was so {{ adjective }} that {{ heOrShe }} wouldn't {{ verb }} if it meant {{ actionVerb }}. Then, one day, {{ event }} occurred. {{ heOrShe }} thought about a {{ noun }} and became {{ adverb }} {{ adjective2 }} for about a minute or two. Once {{ event }} was over, {{ celebrity }} came out of nowhere and stole {{ number }} dollars from {{ himOrHer }}. Indeed, for {{ name }} it was a day to remember.
+				There once was a {{ being }} named {{ name }}. He was so {{ adjective }} that he wouldn't {{ verb }} if it meant {{ actionVerb }}. Then, one day, {{ event }} occurred. He thought about a {{ noun }} and became {{ adverb }} {{ adjective2 }} for about a minute or two. Once {{ event }} was over, {{ celebrity }} came out of nowhere and stole {{ number }} dollars from him. Indeed, for {{ name }} it was a day to remember.
 			</p>
 			<p>
-				On {{ hisOrHer }} way home, {{ name }} was suddenly {{ pastTenseVerb }} and became {{ mood }}. {{ heOrShe }} realized that the only response to this would be to eat a copious amount of {{ pluralSnackFood }}. {{ heOrShe }} lived happily ever after. THE END....?
+				On his way home, {{ name }} was suddenly {{ adjective3 }} and became {{ mood }}. He realized that the only response to this would be to eat a copious amount of {{ pluralSnackFood }}. He lived happily ever after. THE END....?
+			</p>
+		</section>
+		<section class="row story-female" ng-if="gender.name === 'female'">
+			<p>
+				There once was a {{ being }} named {{ name }}. She was so {{ adjective }} that she wouldn't {{ verb }} if it meant {{ actionVerb }}. Then, one day, {{ event }} occurred. She thought about a {{ noun }} and became {{ adverb }} {{ adjective2 }} for about a minute or two. Once {{ event }} was over, {{ celebrity }} came out of nowhere and stole {{ number }} dollars from her. Indeed, for {{ name }} it was a day to remember.
+			</p>
+			<p>
+				On her way home, {{ name }} was suddenly {{ adjective3 }} and became {{ mood }}. She realized that the only response to this would be to eat a copious amount of {{ pluralSnackFood }}. She lived happily ever after. THE END....?
 			</p>
 		</section>
 	</div>

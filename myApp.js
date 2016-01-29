@@ -2,7 +2,10 @@ angular.module('myApp', [])
 .controller('myCtrl', function($scope){
 	$scope.being = "";
 	$scope.name = "";
-	$scope.heOrShe = "";
+	// $scope.heOrShe = "";
+	$scope.gender = {
+		name: ''
+	};
 	$scope.adjective = "";
 	$scope.verb = "";
 	$scope.actionVerb = "";
@@ -13,7 +16,7 @@ angular.module('myApp', [])
 	$scope.pluralSnackFood = "";
 	$scope.celebrity = "";
 	$scope.number = "";
-	$scope.himOrHer = "";
-	$scope.pastTenseVerb = "";
+	// $scope.himOrHer = "";
+	$scope.adjective3 = "";
 	$scope.mood = "";
 });
