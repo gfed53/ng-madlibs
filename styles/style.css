@@ -21,6 +21,10 @@ h1 {
 	margin: 1em;
 }
 
+.words form input {
+	display: inline-block;
+}
+
 .words p {
 	text-align: center;
 	margin: 1em;

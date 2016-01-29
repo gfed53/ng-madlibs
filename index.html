@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="" lang="en">
+<html ng-app="myApp" lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -8,7 +8,7 @@
 	<script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
 </head>
 <!-- ng-init="being = '___'; name = '___'; heOrShe = '___'; adjective = '___'; verb = '___'; actionVerb = '___';" -->
-<body>
+<body ng-controller = "myCtrl">
 	<div class="container">
 		<header class="row">
 			<div class="col-md-4">
@@ -24,6 +24,10 @@
 			<div class="col-md-4">
 				<input type="text" placeholder = "being" ng-model="being">
 				<input type="text" placeholder = "name" ng-model="name">
+				<form action="">
+					<input type="radio" name="gender" value="male"> Male 
+					<input type="radio" name="gender" value="female"> Female 
+				</form>
 				<input type="text" placeholder = "he or she" ng-model="heOrShe">
 				<input type="text" placeholder = "adjective" ng-model="adjective">
 				<input type="text" placeholder = "verb" ng-model="verb">
@@ -56,5 +60,6 @@
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="./myApp.js"></script>
 </body>
 </html>
