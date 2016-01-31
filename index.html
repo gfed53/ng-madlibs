@@ -21,7 +21,7 @@
 		</header>
 		<section class="row words">
 			
-			<form name="myForm" ng-submit="submit()" ng-hide="submitted === true" novalidate>
+			<form name="myForm" ng-submit="submit()" ng-hide="myForm.$submitted && myForm.$valid" novalidate>
 			<h2>Provide the following words:</h2>
 				<div class="col-md-4">
 					<input type="text" placeholder = "being" ng-model="being" required>
@@ -49,7 +49,7 @@
 				<div ng-if="myForm.$submitted" ng-messages="myForm.$error">
 					<span class="error" ng-message="required">All forms must be filled</span>
 				</div>
-				<pre>{{myForm.$valid | json}}</pre>
+				<!-- <pre>{{myForm.$valid | json}}</pre> -->
 			</form>
 		</section>
 		<section class="row story-male" ng-if="myForm.$submitted && myForm.$valid && gender.name === 'male'">
