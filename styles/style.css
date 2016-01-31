@@ -35,6 +35,11 @@ h1 {
 	margin-top: 3em;
 }
 
+.error {
+	font-size: 3em;
+	text-align: center;
+}
+
 .the-story {
 	text-align: center;
 }

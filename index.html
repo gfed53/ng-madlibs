@@ -21,7 +21,7 @@
 		</header>
 		<section class="row words">
 			
-			<form name="myForm" ng-submit="submit()" ng-hide="submitted === true">
+			<form name="myForm" ng-submit="submit()" ng-hide="submitted === true" novalidate>
 			<h2>Provide the following words:</h2>
 				<div class="col-md-4">
 					<input type="text" placeholder = "being" ng-model="being" required>
@@ -46,6 +46,10 @@
 					<input type="text" placeholder = "mood" ng-model="mood" required>
 					<input id="submit" type="submit" value="Submit">
 				</div>
+				<div ng-if="myForm.$submitted" ng-messages="myForm.$error">
+					<span class="error" ng-message="required">All forms must be filled</span>
+				</div>
+				<pre>{{myForm.$valid | json}}</pre>
 			</form>
 		</section>
 		<section class="row story-male" ng-if="myForm.$submitted && myForm.$valid && gender.name === 'male'">
@@ -76,6 +80,7 @@
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="./angular-messages.js"></script>
 	<script src="./myApp.js"></script>
 </body>
 </html>

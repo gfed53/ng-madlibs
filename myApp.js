@@ -1,4 +1,4 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngMessages'])
 .controller('myCtrl', function($scope){
 	$scope.being = "";
 	$scope.name = "";
