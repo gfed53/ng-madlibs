@@ -27,8 +27,26 @@ angular.module('myApp', ['ngMessages'])
 		}
 	};
 	$scope.startOver = function(){
-		$scope.being = $scope.name = $scope.gender.name = $scope.adjective = $scope.adjective = $scope.verb = $scope.actionVerb = $scope.event = $scope.noun = $scope.adverb = $scope.adjective2 = $scope.pluralSnackFood = $scope.celebrity = $scope.number = $scope.adjective3 = $scope.mood = "";
+		//Is this a bad idea, and why?
+		// $scope.being = $scope.name = $scope.gender.name = $scope.adjective = $scope.adjective = $scope.verb = $scope.actionVerb = $scope.event = $scope.noun = $scope.adverb = $scope.adjective2 = $scope.pluralSnackFood = $scope.celebrity = $scope.number = $scope.adjective3 = $scope.mood = "";
+		$scope.being = "";
+		$scope.name = "";
+		$scope.gender = {
+			name: ''
+		};
+		$scope.adjective = "";
+		$scope.verb = "";
+		$scope.actionVerb = "";
+		$scope.event = "";
+		$scope.noun = "";
+		$scope.adverb = "";
+		$scope.adjective2 = "";
+		$scope.pluralSnackFood = "";
+		$scope.celebrity = "";
+		$scope.number = "";
+		$scope.adjective3 = "";
+		$scope.mood = "";
 		$scope.validUponSub = false;
-		console.log("Starting over");
+		console.log($scope.myForm.$submitted);
 	};
 });

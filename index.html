@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="styles/style.css">
 	<script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
 </head>
-<!-- ng-init="being = '___'; name = '___'; heOrShe = '___'; adjective = '___'; verb = '___'; actionVerb = '___';" -->
 <body ng-controller = "myCtrl">
 	<div class="container">
 		<header class="row">
@@ -21,37 +20,46 @@
 		</header>
 		<section class="row words">
 			
-			<form name="myForm" ng-submit="submit()" ng-hide="myForm.$submitted && myForm.$valid" novalidate>
-			<h2>Provide the following words:</h2>
-				<div class="col-md-4">
-					<input type="text" placeholder = "being" ng-model="being" required>
-					<input type="text" placeholder = "name" ng-model="name" required>
-					<input class="gender" type="radio" ng-model="gender.name" value="male"> Male 
-					<input class="gender" type="radio" ng-model="gender.name" value="female"> Female 
-					<input type="text" placeholder = "adjective" ng-model="adjective" required>
-					<input type="text" placeholder = "verb" ng-model="verb" required>
+			<form class="col-md-12" name="myForm" ng-submit="submit()" ng-hide="myForm.$submitted && myForm.$valid" novalidate>
+				<h2>Provide the following words:</h2>
+				<div class="row">
+					<div class="col-md-4">
+						<input type="text" placeholder = "being" ng-model="being" required>
+						<input type="text" placeholder = "name" ng-model="name" required>
+						<input class="gender" type="radio" ng-model="gender.name" value="male"> Male 
+						<input class="gender" type="radio" ng-model="gender.name" value="female"> Female 
+						<input type="text" placeholder = "adjective" ng-model="adjective" required>
+						<input type="text" placeholder = "verb" ng-model="verb" required>
+					</div>
+					<div class="col-md-4">
+						<input type="text" placeholder = "action verb(end in 'ing')" ng-model="actionVerb" required>
+						<input type="text" placeholder = "event" ng-model="event" required>
+						<input type="text" placeholder = "noun" ng-model="noun" required>
+						<input type="text" placeholder = "adverb" ng-model="adverb" required>
+						<input type="text" placeholder = "another adjective" ng-model="adjective2" required>
+						<input type="text" placeholder = "snack food (plural)" ng-model="pluralSnackFood" required>
+					</div>
+					<div class="col-md-4">
+						<input type="text" placeholder = "celebrity" ng-model="celebrity" required>
+						<input type="number" placeholder = "number" ng-model="number" required>
+						<input type="text" placeholder = "another adjective" ng-model="adjective3" required>
+						<input type="text" placeholder = "mood" ng-model="mood" required>
+						<input id="submit" type="submit" value="Submit">
+					</div>
 				</div>
-				<div class="col-md-4">
-					<input type="text" placeholder = "action verb(end in 'ing')" ng-model="actionVerb" required>
-					<input type="text" placeholder = "event" ng-model="event" required>
-					<input type="text" placeholder = "noun" ng-model="noun" required>
-					<input type="text" placeholder = "adverb" ng-model="adverb" required>
-					<input type="text" placeholder = "another adjective" ng-model="adjective2" required>
-					<input type="text" placeholder = "snack food (plural)" ng-model="pluralSnackFood" required>
-				</div>
-				<div class="col-md-4">
-					<input type="text" placeholder = "celebrity" ng-model="celebrity" required>
-					<input type="number" placeholder = "number" ng-model="number" required>
-					<input type="text" placeholder = "another adjective" ng-model="adjective3" required>
-					<input type="text" placeholder = "mood" ng-model="mood" required>
-					<input id="submit" type="submit" value="Submit">
-				</div>
-				<div ng-if="myForm.$submitted" ng-messages="myForm.$error">
-					<span class="error" ng-message="required">All forms must be filled</span>
-				</div>
+				<div class="row error-div" ng-if="myForm.$submitted" ng-messages="myForm.$error">
+				<span class="error" ng-message="required">All forms must be filled</span>
+			</div>
+				
 				<!-- <pre>{{myForm.$valid | json}}</pre> -->
 			</form>
+			
 		</section>
+		<!-- <section class="row">
+			<div ng-if="myForm.$submitted" ng-messages="myForm.$error">
+				<span class="error" ng-message="required">All forms must be filled</span>
+			</div>
+		</section> -->
 		<section class="row story-male" ng-if="myForm.$submitted && myForm.$valid && gender.name === 'male'">
 			<h2 class="the-story">The Story</h2>
 			<p>
