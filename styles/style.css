@@ -55,3 +55,30 @@ h1 {
 	float: right;
 	margin: 1em 2em;
 }
+
+/*CSS Animations*/
+.story-male.ng-enter,
+.story-female.ng-enter,
+.story-male.ng-leave,
+.story-female.ng-leave {
+	transition: 1s linear all;
+}
+
+.story-male.ng-enter,
+.story-female.ng-enter,
+.story-male.ng-leave-active,
+.story-female.ng-leave-active {
+	margin-left: -15em;
+	opacity: 0;
+}
+
+.story-male.ng-leave,
+.story-female.ng-leave,
+.story-male.ng-enter-active,
+.story-female.ng-enter-active {
+	margin-left: 0;
+	opacity: 1;
+}
+
+
+
