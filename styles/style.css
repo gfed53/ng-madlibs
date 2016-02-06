@@ -16,6 +16,10 @@ h1 {
 	font-size: 6em;
 }
 
+.words {
+	/*transition: 1s linear all;*/
+}
+
 .words input {
 	display: block;
 	margin: 1em;
@@ -47,6 +51,11 @@ h1 {
 	text-align: center;
 }
 
+.story-male,
+.story-female {
+	transition: 1s linear all;
+}
+
 .story-male p, .story-female p {
 	margin: 1em 3em;
 }
@@ -61,24 +70,43 @@ h1 {
 .story-female.ng-enter,
 .story-male.ng-leave,
 .story-female.ng-leave {
-	transition: 1s linear all;
+	/*transition: 1s linear all;*/
 }
 
 .story-male.ng-enter,
 .story-female.ng-enter,
-.story-male.ng-leave-active,
-.story-female.ng-leave-active {
+.story-male.ng-leave.ng-leave-active,
+.story-female.ng-leave.ng-leave-active {
 	margin-left: -15em;
 	opacity: 0;
 }
 
 .story-male.ng-leave,
 .story-female.ng-leave,
-.story-male.ng-enter-active,
-.story-female.ng-enter-active {
+.story-male.ng-enter.ng-enter-active,
+.story-female.ng.enter.ng-enter-active {
 	margin-left: 0;
 	opacity: 1;
 }
+
+/*.words.ng-hide-add,
+.words.ng-hide-remove {
+	display:block !important;
+}
+
+.words.ng-hide-add,
+.words.ng-hide-remove.ng-hide-remove-active {
+	width: 100%;
+	opacity: 1;
+	margin-top: 0;
+}
+
+.words.ng-hide-remove,
+.words.ng-hide-add.ng-hide-add-active {
+	width: 25%;
+	opacity: 0.5;
+	margin-top: -20em;
+}*/
 
 
 
