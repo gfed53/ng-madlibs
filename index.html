@@ -60,7 +60,7 @@
 				<span class="error" ng-message="required">All forms must be filled</span>
 			</div>
 		</section> -->
-		<section class="row story-male" ng-if="myForm.$submitted && myForm.$valid && gender.name === 'male'">
+		<section class="row story-male" ng-show="myForm.$submitted && myForm.$valid && gender.name === 'male'">
 			<h2 class="the-story">The Story</h2>
 			<p>
 				There once was a {{ being }} named {{ name }}. He was so {{ adjective }} that he wouldn't {{ verb }} if it meant {{ actionVerb }}. Then, one day, {{ event }} occurred. He thought about a {{ noun }} and became {{ adverb }} {{ adjective2 }} for about a minute or two. Once {{ event }} was over, {{ celebrity }} came out of nowhere and stole {{ number }} dollars from him. Indeed, for {{ name }} it was a day to remember.
@@ -72,7 +72,7 @@
 				<input type="submit" value="Start Over">
 			</form>
 		</section>
-		<section class="row story-female" ng-if="myForm.$submitted && myForm.$valid && gender.name === 'female'">
+		<section class="row story-female" ng-show="myForm.$submitted && myForm.$valid && gender.name === 'female'">
 			<h2 class="the-story">The Story</h2>
 			<p>
 				There once was a {{ being }} named {{ name }}. She was so {{ adjective }} that she wouldn't {{ verb }} if it meant {{ actionVerb }}. Then, one day, {{ event }} occurred. She thought about a {{ noun }} and became {{ adverb }} {{ adjective2 }} for about a minute or two. Once {{ event }} was over, {{ celebrity }} came out of nowhere and stole {{ number }} dollars from her. Indeed, for {{ name }} it was a day to remember.

@@ -66,25 +66,27 @@ h1 {
 }
 
 /*CSS Animations*/
-.story-male.ng-enter,
-.story-female.ng-enter,
-.story-male.ng-leave,
-.story-female.ng-leave {
+.story-male.ng-hide-remove,
+.story-female.ng-hide-remove,
+.story-male.ng-hide-add,
+.story-female.ng-hide-add {
 	/*transition: 1s linear all;*/
 }
 
-.story-male.ng-enter,
-.story-female.ng-enter,
-.story-male.ng-leave.ng-leave-active,
-.story-female.ng-leave.ng-leave-active {
+/*Hidden*/
+.story-male.ng-hide-remove,
+.story-male.ng-hide-add.ng-hide-add-active,
+.story-female.ng-hide-remove,
+.story-female.ng-hide-remove.ng-hide-remove-active {
 	margin-left: -15em;
 	opacity: 0;
 }
 
-.story-male.ng-leave,
-.story-female.ng-leave,
-.story-male.ng-enter.ng-enter-active,
-.story-female.ng.enter.ng-enter-active {
+/*Revealed*/
+.story-male.ng-hide-add,
+.story-male.ng-hide-remove.ng-hide-remove-active,
+.story-female.ng-hide-add,
+.story-female.ng.hide-remove.ng-hide-remove-active {
 	margin-left: 0;
 	opacity: 1;
 }
